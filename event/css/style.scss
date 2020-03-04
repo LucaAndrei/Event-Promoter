@@ -1,0 +1,174 @@
+@import '../../shared/eventpromoter';
+@import '../../shared/css/colors';
+@import '../../shared/css/footer';
+.event-container {
+  margin-bottom: 15px;
+}
+.container {
+  z-index: 999;
+  margin-top: 160px;
+}
+.event--card-info {
+  background: #FFFFFF;
+  box-shadow: 0 5px 50px 0 rgba(0,0,0,.25);
+  width: 100%;
+  max-width: 360px;
+  position: absolute;
+  padding: 30px;
+  margin: {
+    top: -300px;
+    left: -140px;
+  }
+
+  .date {
+    display: flex;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background: $yellow;
+    color: #FFFFFF;
+
+    .date-container {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.2em;
+      line-height: 1em;
+      .day {
+        font: {
+          size: 34px;
+          weight: bold;
+        }
+      }
+      .month {
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .info-title {
+    font: {
+      size: 30px;
+      weight: bold;
+    }
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 16px 0px;
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+
+    border: 2px solid #FFFFFF {
+      radius: 0px;
+
+    }
+    letter-spacing: 2px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: $dark-green;
+    color: #FFFFFF;
+    width: 100%;
+    &:focus, &:active, &:hover {
+      box-shadow: none !important;
+      color: $yellow;
+    }
+  }
+}
+
+.event {
+
+  .event-date-location {
+    padding: 40px;
+
+    .divider {
+      border-right: 2px solid $yellow;
+    }
+
+    p {
+      font-family: 'Josefin Sans', sans-serif !important;
+    }
+  }
+
+  .event-details {
+    font-size : 1.2rem;
+    word-wrap: break-word;
+    padding: 20px;
+  }
+
+  .event-title {
+    width: 100%;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h1 {
+  line-height: 4rem;
+}
+
+.horiz-rule {
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-bottom: 25px;
+  background-color: $yellow;
+
+  &.hr--centered {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.header-container {
+  width: 100%;
+  position: relative;
+  .header-img {
+    height: 32rem;
+    background-color: #ccc;
+
+    img {
+      filter: blur(50px) brightness(0.9);
+      position: relative;
+      height: 100%;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+  .container {
+
+    margin-top: 0px;
+  }
+  .event {
+    padding: 42px 72px 60px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 19px 35px 0px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    width: 100%;
+    margin-top: -140px;
+
+    img {
+      height: 360px;
+    }
+
+    .event-details {
+      padding: 40px;
+    }
+  }
+}

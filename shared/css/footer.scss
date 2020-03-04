@@ -1,0 +1,115 @@
+@import 'colors.scss';
+
+footer {
+  padding: 20px 0 0 0;
+  color: #207e89 !important;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  width: 100% !important;
+  margin: 0 auto !important;
+  background-color: $light-green !important;
+  bottom: 0;
+  position: relative;
+  -webkit-text-size-adjust: none;
+
+  .container {
+    margin-top: 0px;
+    .social li a {
+      display: block;
+      height: 25px;
+      width: 25px;
+      color: #fff;
+      line-height: 25px;
+      text-align: center;
+      text-decoration: none!important;
+      font-size: 25px;
+    }
+    p{
+    color: #fff;
+    }
+  }
+
+  /* Effect 1: Brackets */
+  .cl-effect-1 a::before,
+  .cl-effect-1 a::after {
+  	display: inline-block;
+  	opacity: 0;
+  	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  	transition: transform 0.3s, opacity 0.2s;
+  }
+
+  .cl-effect-1 a::before {
+  	margin-right: 10px;
+  	content: '[';
+  	-webkit-transform: translateX(20px);
+  	-moz-transform: translateX(20px);
+  	transform: translateX(20px);
+  }
+
+  .cl-effect-1 a::after {
+  	margin-left: 10px;
+  	content: ']';
+  	-webkit-transform: translateX(-20px);
+  	-moz-transform: translateX(-20px);
+  	transform: translateX(-20px);
+  }
+
+  .cl-effect-1 a:hover::before,
+  .cl-effect-1 a:hover::after,
+  .cl-effect-1 a:focus::before,
+  .cl-effect-1 a:focus::after {
+  	opacity: 1;
+  	-webkit-transform: translateX(0px);
+  	-moz-transform: translateX(0px);
+  	transform: translateX(0px);
+  }
+
+  h3 {
+    font: 12px/14px 'LatoBold',Helvetica,Arial,sans-serif;
+    color: #207e89 !important;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    padding: 0 0 8px;
+    margin-top: 20px;
+  }
+
+  a {
+    color: #207e89
+  }
+
+  li {
+    a {
+      display: block;
+      color: #fff;
+      &:hover {
+        color: #207e89
+      }
+    }
+  }
+}
+
+.copyright-container {
+  background: #207e89;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  .copyright {
+    color: rgba(255,255,255,0.25);
+    padding: 15px 0;
+    text-align: center;
+    a {
+      color: rgba(255,255,255,0.35);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+}

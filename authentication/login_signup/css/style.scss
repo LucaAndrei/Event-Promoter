@@ -1,0 +1,186 @@
+@import "../../css/auth_btn";
+@import "../../css/form";
+@import '../../../shared/eventpromoter';
+
+.wrapper {
+  .tab-content {
+    width: 100%;
+    h1 {
+      text-align: center;
+      font-weight: 300;
+      margin: 0 0 40px;
+    }
+  }
+
+  .auth-nav-wrapper {
+    margin: 40px 0 40px 0;
+    width: 100%;
+    .nav-pills {
+      li {
+        width: 50%;
+        a {
+          &:hover {
+            color: $yellow;
+          }
+          padding: 15px;
+          background: $light-green;
+          color: #FFFFFF;
+          font-size: 20px;
+          text-align: center;
+          -webkit-transition: .5s ease;
+          transition: .5s ease;
+        }
+      }
+      .nav-item {
+        .active {
+          background: $dark-green;
+        }
+      }
+      .nav-link {
+        border-radius: 0px;
+      }
+    }
+  }
+}
+
+/****** SOCIAL ICONS *******/
+
+@mixin user-select() {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+    -ms-user-select: none;
+      user-select: none;
+}
+
+@mixin transition($duration) {
+  -webkit-transition: all $duration;
+     -moz-transition: all $duration;
+     -o-transition: all $duration;
+      transition: all $duration;
+}
+
+.social-nav {
+  margin: 20px auto 0px auto;
+
+  .divider {
+    margin: auto;
+  }
+
+  hr.auth-divider {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    color: #a0b3b0;
+    text-align: center;
+    &:after {
+      content: "sau";
+      display: inline-block;
+      position: relative;
+      top: -0.9em;
+      font-size: 1.3em;
+      padding: 0 1em;
+      background: white;
+    }
+  }
+}
+/* Wrapper */
+.icon-button {
+  background-color: white;
+  border-radius: 3.6rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2.0rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  @include user-select();
+  width: 3.6rem;
+
+  span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    @include transition(0.3s);
+    width: 0;
+  }
+
+  &:hover {
+    span {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 3.6rem;
+      margin: -1.8rem;
+    }
+
+    .icon-twitter, .icon-facebook, .icon-google-plus {
+      color: white;
+    }
+  }
+
+  i {
+    background: none;
+    color: white;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: absolute;
+    top: 0;
+    @include transition(0.3s);
+    width: 3.6rem;
+    z-index: 10;
+  }
+
+  .icon-twitter {
+    color: #4099ff;
+    & + span {
+      background-color: #4099ff;
+    }
+  }
+
+  .icon-facebook {
+    color: #3B5998;
+    & + span {
+      background-color: #3B5998;
+    }
+  }
+
+  .icon-google-plus {
+    color: #db5a3c;
+    & + span {
+      background-color: #db5a3c;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  .social-nav {
+    .icon-button {
+      font-size: 3rem;
+    }
+  }
+  .wrapper {
+    .auth-nav-wrapper {
+      .nav-pills {
+        li {
+          a {
+            font-size: 1.6em;
+          }
+        }
+      }
+    }
+  }
+}
